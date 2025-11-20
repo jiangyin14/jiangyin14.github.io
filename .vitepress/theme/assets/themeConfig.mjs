@@ -15,8 +15,8 @@ export const themeConfig = {
     // 作者
     author: {
       name: "姜胤（小姜）",
-      cover: "/images/logo/logo.webp",
-      email: "",
+      cover: "/images/author.jpeg",
+      email: "jiangyin14@smart-teach.cn",
       link: "https://github.com/jiangyin14",
     },
   },
@@ -172,7 +172,8 @@ export const themeConfig = {
   footer: {
     social: [
       { icon: "github", link: "https://github.com/jiangyin14" },
-      { icon: "email", link: "" },
+      { icon: "email", link: "mailto:jiangyin14@smart-teach.cn" },
+      { icon: "qq", link: "http://wpa.qq.com/msgrd?v=3&uin=1219439938&site=qq&menu=yes" },
     ],
     sitemap: [
       {
@@ -197,6 +198,14 @@ export const themeConfig = {
         text: "服务",
         items: [
           { text: "站点订阅", link: "/rss.xml" },
+        ],
+      },
+      {
+        text: "联系",
+        items: [
+          { text: "邮箱", link: "mailto:jiangyin14@smart-teach.cn" },
+          { text: "电话", link: "tel:18518122696" },
+          { text: "QQ", link: "http://wpa.qq.com/msgrd?v=3&uin=1219439938&site=qq&menu=yes" },
         ],
       },
     ],
