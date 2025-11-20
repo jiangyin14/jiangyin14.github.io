@@ -19,22 +19,24 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x  # 选择一个稳定的 Node 版本
-          cache: 'npm'
+          node-version: 20.x
+          cache: 'pnpm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build VitePress
-        run: npm run build  # 确保 package.json 中配置了正确的构建脚本
+        run: pnpm build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # VitePress 默认构建输出目录（根据你的实际配置修改）
           publish_dir: .vitepress/dist
-          # 可选：指定自定义域名（如果需要）
-          # cname: your-domain.com
-          # 可选：保留历史提交（false 会强制覆盖）
+          cname: blog.jiangyin14.top
           keep_files: false
