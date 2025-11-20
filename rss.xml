@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Curve</title>
+        <link>https://blog.imsyy.top</link>
+        <description>Hello World</description>
+        <lastBuildDate>Thu, 20 Nov 2025 03:12:53 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Admin</generator>
+        <language>zh</language>
+        <copyright>Copyright © 2020-present Admin</copyright>
+        <item>
+            <title><![CDATA[欢迎使用 Curve]]></title>
+            <link>https://blog.imsyy.top/posts/2024/1010</link>
+            <guid>https://blog.imsyy.top/posts/2024/1010</guid>
+            <pubDate>Thu, 10 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[欢迎使用 Curve 主题，这是你的第一篇文章]]></description>
+            <author>114514@gmail.com (Admin)</author>
+        </item>
+    </channel>
+</rss>
