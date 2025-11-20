@@ -7,7 +7,7 @@ export const themeConfig = {
     // 站点描述
     description: "jiangyin14 的博客",
     // 站点logo
-    logo: "/images/logo/logo.webp",
+    logo: "/images/author.jpeg",
     // 站点地址
     site: "https://blog.jiangyin14.top",
     // 语言
