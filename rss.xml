@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>小姜的博客</title>
+        <title>姜胤的 Blog</title>
         <link>https://blog.jiangyin14.top</link>
         <description>jiangyin14 的博客</description>
-        <lastBuildDate>Thu, 20 Nov 2025 05:21:21 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 20 Nov 2025 14:40:30 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>姜胤（小姜）</generator>
+        <generator>jiangyin14 姜胤</generator>
         <language>zh</language>
-        <copyright>Copyright © 2020-present 姜胤（小姜）</copyright>
+        <copyright>Copyright © 2020-present jiangyin14 姜胤</copyright>
         <item>
-            <title><![CDATA[第一篇博客：小姜的自我介绍]]></title>
+            <title><![CDATA[第一篇博客：jiangyin14的自我介绍]]></title>
             <link>https://blog.jiangyin14.top/posts/first-blog</link>
             <guid>https://blog.jiangyin14.top/posts/first-blog</guid>
             <pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[高二在读，全职科技创业，探月「一小步」学员；现任天津静海汇智卓创文化发展有限公司创始人兼首席执行官。]]></description>
-            <author>jiangyin14@smart-teach.cn (姜胤（小姜）)</author>
+            <author>jiangyin14@smart-teach.cn (jiangyin14 姜胤)</author>
         </item>
     </channel>
 </rss>
