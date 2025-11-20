@@ -1,10 +1,9 @@
 <!-- 侧边栏 - 欢迎 -->
 <template>
   <div class="hello s-card" @mouseleave="resetHello">
-    <span class="tip" @click="changeHello">{{ helloText }}</span>
     <div class="content">
       <div class="site-logo">
-        <Clock />
+        <img :src="theme.siteMeta.logo" alt="author" class="author" />
       </div>
       <span class="site-desc" v-html="theme.aside.hello.text" />
     </div>
@@ -86,7 +85,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="scss" scoped>
-.hello {
+  .hello {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,10 +125,20 @@ onBeforeUnmount(() => {
       position: absolute;
       width: 160px;
       height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition:
         transform cubic-bezier(0.69, 0.39, 0, 1.21) 0.3s,
         opacity cubic-bezier(0.69, 0.39, 0, 1.21) 0.3s;
       transform-origin: bottom;
+      .author {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 8px 16px -4px var(--main-border-shadow);
+      }
     }
     .site-desc {
       display: block;
@@ -193,10 +202,6 @@ onBeforeUnmount(() => {
   }
   &:hover {
     .content {
-      .site-logo {
-        opacity: 0;
-        transform: scale(0);
-      }
       .site-desc {
         opacity: 1;
       }

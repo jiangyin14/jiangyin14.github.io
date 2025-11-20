@@ -101,8 +101,10 @@ const postData = computed(() => {
   else {
     data = theme.value.postData;
   }
+  // 过滤演示条目
+  const filtered = (data || []).filter((i) => i?.title !== "欢迎使用 Curve");
   // 返回列表
-  return data ? data.slice(page * postSize, page * postSize + postSize) : [];
+  return filtered.slice(page * postSize, page * postSize + postSize);
 });
 
 // 恢复滚动位置

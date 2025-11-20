@@ -82,14 +82,20 @@ const gridStyle = computed(() =>
   } : {}
 )
 
-// 判断是否显示封面
-const showCover = () => themeConfig.value?.cover?.showCover?.enable
+// 判断是否显示封面（个人分类或标签不显示）
+const showCover = (item) => {
+  const enable = themeConfig.value?.cover?.showCover?.enable
+  if (!enable) return false
+  const cats = Array.isArray(item?.categories) ? item.categories : (item?.categories ? String(item.categories).split(',') : [])
+  const tags = Array.isArray(item?.tags) ? item.tags : (item?.tags ? String(item.tags).split(',') : [])
+  return !(cats.includes('个人') || tags.includes('个人'))
+}
 
 // 获取封面图片 按优先级获取：cover > defaultCover > false
-const getCover = ({ cover: itemCover }) => {
+const getCover = ({ cover: itemCover, categories, tags }) => {
   const { cover } = themeConfig.value ?? {}
   
-  if (!cover?.showCover?.enable) return false
+  if (!showCover({ categories, tags })) return false
   if (itemCover) return itemCover
   
   return Array.isArray(cover.showCover.defaultCover) 
