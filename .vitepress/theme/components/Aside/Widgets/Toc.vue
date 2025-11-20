@@ -1,15 +1,22 @@
 <template>
   <!-- 目录 -->
-  <div v-if="tocData && tocData?.length" class="toc s-card">
+  <div
+    v-if="tocData && tocData?.length"
+    class="toc s-card"
+  >
     <div class="toc-title">
       <i class="iconfont icon-toc" />
       <span class="name">目录</span>
     </div>
-    <div id="toc-all" class="toc-list" :style="{ '--height': activeTocHeight + 'px' }">
+    <div
+      id="toc-all"
+      class="toc-list"
+      :style="{ '--height': activeTocHeight + 'px' }"
+    >
       <span
         v-for="(item, index) in tocData"
-        :key="index"
         :id="'toc-' + item.id"
+        :key="index"
         :class="[
           'toc-item',
           item.type,

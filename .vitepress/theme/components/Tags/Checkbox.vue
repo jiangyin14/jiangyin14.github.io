@@ -1,5 +1,8 @@
 <template>
-  <div class="checkbox" @click="checkboxClick">
+  <div
+    class="checkbox"
+    @click="checkboxClick"
+  >
     <div :class="['checkbox-box', { check: model }]" />
     <div class="checkbox-label">
       <slot />

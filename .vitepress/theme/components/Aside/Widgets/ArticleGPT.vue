@@ -1,17 +1,29 @@
 <!-- AI 摘要（假） -->
 <template>
-  <div v-if="frontmatter.articleGPT" class="article-gpt s-card">
+  <div
+    v-if="frontmatter.articleGPT"
+    class="article-gpt s-card"
+  >
     <div class="title">
-      <span class="name" @click="router.go('/posts/2024/0218')">
-        <i class="iconfont icon-robot"></i>
+      <span
+        class="name"
+        @click="router.go('/posts/2024/0218')"
+      >
+        <i class="iconfont icon-robot" />
         文章摘要
-        <i class="iconfont icon-up"></i>
+        <i class="iconfont icon-up" />
       </span>
-      <span :class="['logo', { loading }]" @click="showOther"> FakeGPT </span>
+      <span
+        :class="['logo', { loading }]"
+        @click="showOther"
+      > FakeGPT </span>
     </div>
     <div class="content s-card">
       <span class="text">{{ abstractData === "" ? "加载中..." : abstractData }}</span>
-      <span v-if="loading" class="point">|</span>
+      <span
+        v-if="loading"
+        class="point"
+      >|</span>
     </div>
     <div class="meta">
       <span class="tip">此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结</span>

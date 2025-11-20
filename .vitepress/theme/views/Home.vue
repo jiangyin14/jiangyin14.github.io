@@ -1,20 +1,23 @@
 <!-- 首页 -->
 <template>
   <div class="home">
-    <Banner v-if="showHeader" :height="store.bannerType" />
+    <Banner
+      v-if="showHeader"
+      :height="store.bannerType"
+    />
     <div class="home-content">
       <div class="posts-content">
         <!-- 分类总览 -->
         <TypeBar :type="showTags ? 'tags' : 'categories'" />
         <!-- 文章列表 -->
-        <PostList :listData="postData" />
+        <PostList :list-data="postData" />
         <!-- 分页 -->
         <Pagination
           :total="allListTotal"
           :page="Number(page)"
           :limit="postSize"
-          :useParams="showCategories || showTags ? true : false"
-          :routePath="
+          :use-params="showCategories || showTags ? true : false"
+          :route-path="
             showCategories
               ? `/pages/categories/${showCategories}`
               : showTags

@@ -1,10 +1,16 @@
 <!-- 页脚 - 链接 -->
 <template>
   <div class="footer-link">
-    <div v-if="showBar" class="footer-bar">
+    <div
+      v-if="showBar"
+      class="footer-bar"
+    >
       <span class="site-title">{{ site.title }}</span>
       <span class="site-desc">{{ site.description }}</span>
-      <a href="/" class="to-home">了解更多</a>
+      <a
+        href="/"
+        class="to-home"
+      >了解更多</a>
     </div>
     <div class="footer-social">
       <a
@@ -14,10 +20,18 @@
         target="_blank"
         class="social-link"
       >
-        <i :class="`iconfont icon-${item.icon}`"></i>
+        <i :class="`iconfont icon-${item.icon}`" />
       </a>
-      <div class="logo" title="返回顶部" @click="smoothScrolling">
-        <img :src="siteMeta.author.cover" alt="author" class="author" />
+      <div
+        class="logo"
+        title="返回顶部"
+        @click="smoothScrolling"
+      >
+        <img
+          :src="siteMeta.author.cover"
+          alt="author"
+          class="author"
+        >
       </div>
       <a
         v-for="(item, index) in socialLinkData.second"
@@ -26,11 +40,15 @@
         target="_blank"
         class="social-link"
       >
-        <i :class="`iconfont icon-${item.icon}`"></i>
+        <i :class="`iconfont icon-${item.icon}`" />
       </a>
     </div>
     <div class="footer-sitemap">
-      <div v-for="(item, index) in footer.sitemap" :key="index" class="sitemap-item">
+      <div
+        v-for="(item, index) in footer.sitemap"
+        :key="index"
+        class="sitemap-item"
+      >
         <span class="title">{{ item.text }}</span>
         <div class="links">
           <a

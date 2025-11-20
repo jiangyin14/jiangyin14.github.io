@@ -3,7 +3,10 @@
   <div :class="[frontmatter.layout || 'page', { 'has-aside': frontmatter.aside }]">
     <div class="page-content">
       <!-- 页面内容 -->
-      <Content id="page-content" :class="['markdown-main-style', { 's-card': frontmatter.card }]" />
+      <Content
+        id="page-content"
+        :class="['markdown-main-style', { 's-card': frontmatter.card }]"
+      />
       <!-- 评论 -->
       <Comments v-if="frontmatter.comment" />
     </div>

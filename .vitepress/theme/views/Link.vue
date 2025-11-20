@@ -2,14 +2,24 @@
 <template>
   <div class="link">
     <!-- 顶图 -->
-    <Banner type="page" title="友情链接" desc="与各位博主无限进步">
-      <template v-slot:header-slot>
+    <Banner
+      type="page"
+      title="友情链接"
+      desc="与各位博主无限进步"
+    >
+      <template #header-slot>
         <div class="menu">
-          <div class="menu-item random" @click="randomJump">
+          <div
+            class="menu-item random"
+            @click="randomJump"
+          >
             <i class="iconfont icon-shuffle" />
             <span class="name">随机访问</span>
           </div>
-          <div class="menu-item add" @click="smoothScrolling('#友情链接申请')">
+          <div
+            class="menu-item add"
+            @click="smoothScrolling('#友情链接申请')"
+          >
             <i class="iconfont icon-right-round" />
             <span class="name">申请友链</span>
           </div>
@@ -31,7 +41,10 @@
       </div> -->
     </Banner>
     <!-- 友链数据 -->
-    <LinkList :listData="linkData" :useFriendsLink="true" />
+    <LinkList
+      :list-data="linkData"
+      :use-friends-link="true"
+    />
   </div>
 </template>
 

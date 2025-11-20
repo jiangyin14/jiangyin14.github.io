@@ -12,7 +12,10 @@
     <!-- 404 -->
     <NotFound v-if="page.isNotFound" />
     <!-- 首页 -->
-    <Home v-if="frontmatter.layout === 'home'" showHeader />
+    <Home
+      v-if="frontmatter.layout === 'home'"
+      show-header
+    />
     <!-- 页面 -->
     <template v-else>
       <!-- 文章页面 -->
@@ -22,7 +25,10 @@
     </template>
   </main>
   <!-- 页脚 -->
-  <FooterLink v-show="!loadingStatus" :showBar="isPostPage && !page.isNotFound" />
+  <FooterLink
+    v-show="!loadingStatus"
+    :show-bar="isPostPage && !page.isNotFound"
+  />
   <Footer v-show="!loadingStatus" />
   <!-- 悬浮菜单 -->
   <Teleport to="body">

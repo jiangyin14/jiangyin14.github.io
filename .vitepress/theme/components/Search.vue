@@ -3,7 +3,7 @@
   <Modal
     :show="store.searchShow"
     title="全局搜索"
-    titleIcon="search"
+    title-icon="search"
     @mask-click="store.changeShowStatus('searchShow')"
     @modal-close="store.changeShowStatus('searchShow')"
   >
@@ -16,23 +16,46 @@
       @state-change="searchChange"
     >
       <ais-configure :hits-per-page.camel="8" />
-      <ais-search-box placeholder="想要搜点什么" autofocus />
+      <ais-search-box
+        placeholder="想要搜点什么"
+        autofocus
+      />
       <ais-hits v-if="hasSearchValue">
-        <template v-slot="{ items }">
-          <Transition name="fade" mode="out-in">
-            <div v-if="formatSearchData(items)?.length" class="search-list">
+        <template #default="{ items }">
+          <Transition
+            name="fade"
+            mode="out-in"
+          >
+            <div
+              v-if="formatSearchData(items)?.length"
+              class="search-list"
+            >
               <div
                 v-for="(item, index) in formatSearchData(items)"
                 :key="index"
                 class="search-item s-card hover"
                 @click="jumpSearch(item.url)"
               >
-                <p class="title" v-html="item.title" />
-                <p v-if="item?.anchor" class="anchor" v-html="item.anchor" />
-                <p v-if="item?.content" class="content s-card" v-html="item.content" />
+                <p
+                  class="title"
+                  v-html="item.title"
+                />
+                <p
+                  v-if="item?.anchor"
+                  class="anchor"
+                  v-html="item.anchor"
+                />
+                <p
+                  v-if="item?.content"
+                  class="content s-card"
+                  v-html="item.content"
+                />
               </div>
             </div>
-            <div v-else class="no-result">
+            <div
+              v-else
+              class="no-result"
+            >
               <i class="iconfont icon-search-empty" />
               <span class="text">搜索结果为空</span>
             </div>
@@ -41,11 +64,18 @@
       </ais-hits>
       <ais-pagination v-if="hasSearchValue" />
       <ais-stats>
-        <template v-slot="{ processingTimeMS }">
+        <template #default="{ processingTimeMS }">
           <div class="information">
-            <span v-if="hasSearchValue" class="text"> 本次用时 {{ processingTimeMS }} 毫秒 </span>
+            <span
+              v-if="hasSearchValue"
+              class="text"
+            > 本次用时 {{ processingTimeMS }} 毫秒 </span>
           </div>
-          <a class="power" href="https://www.algolia.com/" target="_blank">
+          <a
+            class="power"
+            href="https://www.algolia.com/"
+            target="_blank"
+          >
             <i class="iconfont icon-algolia" />
             <span class="name">Algolia</span>
           </a>

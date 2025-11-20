@@ -1,11 +1,20 @@
 <template>
   <div class="archives s-card">
     <div class="title">
-      <h1 class="name">文章</h1>
-      <sup v-if="theme.postData?.length" class="num">{{ theme.postData.length }}</sup>
+      <h1 class="name">
+        文章
+      </h1>
+      <sup
+        v-if="theme.postData?.length"
+        class="num"
+      >{{ theme.postData.length }}</sup>
     </div>
     <div class="archives-list">
-      <div v-for="(year, index) in theme.archivesData.year" :key="index" class="year-list">
+      <div
+        v-for="(year, index) in theme.archivesData.year"
+        :key="index"
+        class="year-list"
+      >
         <span class="year">{{ year }}</span>
         <div class="posts">
           <div

@@ -1,6 +1,10 @@
 <!-- 文章列表 -->
 <template>
-  <div class="post-lists" :class="{'layout-grid': layoutType === 'twoColumns'}" :style="gridStyle">
+  <div
+    class="post-lists"
+    :class="{'layout-grid': layoutType === 'twoColumns'}"
+    :style="gridStyle"
+  >
     <div
       v-for="(item, index) in listData"
       :key="index"
@@ -8,28 +12,53 @@
       :style="{ animationDelay: `${0.4 + index / 10}s` }"
       @click="toPost(item.regularPath)"
     >
-      <div v-if="!simple && showCover(item)" class="post-cover">
-        <img :src="getCover(item)" :alt="item.title">
+      <div
+        v-if="!simple && showCover(item)"
+        class="post-cover"
+      >
+        <img
+          :src="getCover(item)"
+          :alt="item.title"
+        >
       </div>
       
       <div class="post-content">
-        <div v-if="!simple && item?.categories" class="post-category">
-          <span v-for="cat in item?.categories" :key="cat" class="cat-name">
+        <div
+          v-if="!simple && item?.categories"
+          class="post-category"
+        >
+          <span
+            v-for="cat in item?.categories"
+            :key="cat"
+            class="cat-name"
+          >
             <i class="iconfont icon-folder" />
             {{ cat }}
           </span>
           <!-- 置顶 -->
-          <span v-if="item?.top" class="top">
+          <span
+            v-if="item?.top"
+            class="top"
+          >
             <i class="iconfont icon-align-top" />
             置顶
           </span>
         </div>
         <span class="post-title">{{ item.title }}</span>
-        <span v-if="item?.description" class="post-desc">
+        <span
+          v-if="item?.description"
+          class="post-desc"
+        >
           {{ item.description }}
         </span>
-        <div v-if="!simple" class="post-meta">
-          <div v-if="item?.tags" class="post-tags">
+        <div
+          v-if="!simple"
+          class="post-meta"
+        >
+          <div
+            v-if="item?.tags"
+            class="post-tags"
+          >
             <span
               v-for="tags in item?.tags"
               :key="tags"
@@ -71,14 +100,14 @@ const { theme: themeConfig } = useData()
 
 // 计算布局类型
 const layoutType = computed(() => 
-  themeConfig.value?.cover?.twoColumns ? 'twoColumns' : themeConfig.value?.cover?.showCover?.coverLayout ?? 'left'
+  themeConfig.value?.cover?.twoColumns ? "twoColumns" : themeConfig.value?.cover?.showCover?.coverLayout ?? "left"
 )
 
 // 计算网格样式
 const gridStyle = computed(() => 
-  layoutType.value === 'twoColumns' ? {
-    '--grid-columns': 2,
-    '--grid-gap': '1rem'
+  layoutType.value === "twoColumns" ? {
+    "--grid-columns": 2,
+    "--grid-gap": "1rem"
   } : {}
 )
 
@@ -86,9 +115,9 @@ const gridStyle = computed(() =>
 const showCover = (item) => {
   const enable = themeConfig.value?.cover?.showCover?.enable
   if (!enable) return false
-  const cats = Array.isArray(item?.categories) ? item.categories : (item?.categories ? String(item.categories).split(',') : [])
-  const tags = Array.isArray(item?.tags) ? item.tags : (item?.tags ? String(item.tags).split(',') : [])
-  return !(cats.includes('个人') || tags.includes('个人'))
+  const cats = Array.isArray(item?.categories) ? item.categories : (item?.categories ? String(item.categories).split(",") : [])
+  const tags = Array.isArray(item?.tags) ? item.tags : (item?.tags ? String(item.tags).split(",") : [])
+  return !(cats.includes("个人") || tags.includes("个人"))
 }
 
 // 获取封面图片 按优先级获取：cover > defaultCover > false

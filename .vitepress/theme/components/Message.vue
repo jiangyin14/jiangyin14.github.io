@@ -1,7 +1,10 @@
 <!-- 全局消息 -->
 <template>
   <Teleport to="body">
-    <Transition name="fadeDown" mode="out-in">
+    <Transition
+      name="fadeDown"
+      mode="out-in"
+    >
       <div
         v-if="messageShow"
         :class="['message', messageType, { always: messageAlways }]"
@@ -10,8 +13,11 @@
       >
         <div class="message-content">
           <span class="text">{{ messageContent || "默认消息内容" }}</span>
-          <span v-if="messageClose" class="close">
-            <i class="iconfont icon-close"></i>
+          <span
+            v-if="messageClose"
+            class="close"
+          >
+            <i class="iconfont icon-close" />
           </span>
         </div>
       </div>

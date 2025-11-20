@@ -1,5 +1,9 @@
 <template>
-  <div ref="commentRef" id="comment-dom" :class="['comment-content', 'artalk', { fill }]" />
+  <div
+    id="comment-dom"
+    ref="commentRef"
+    :class="['comment-content', 'artalk', { fill }]"
+  />
 </template>
 
 <script setup>

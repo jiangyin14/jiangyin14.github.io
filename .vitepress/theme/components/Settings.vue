@@ -1,15 +1,18 @@
 <!-- 全局设置 -->
 <template>
   <div class="settings">
-    <div class="set-btn s-card" @click="store.changeShowStatus('showSeetings')">
-      <i class="iconfont icon-style"></i>
+    <div
+      class="set-btn s-card"
+      @click="store.changeShowStatus('showSeetings')"
+    >
+      <i class="iconfont icon-style" />
       <span class="set-text">个性化配置</span>
     </div>
     <!-- 设置面板 -->
     <Modal
       :show="store.showSeetings"
       title="个性化配置"
-      titleIcon="style"
+      title-icon="style"
       @mask-click="store.changeShowStatus('showSeetings')"
       @modal-close="store.changeShowStatus('showSeetings')"
     >
@@ -35,9 +38,15 @@
         <div class="set-item">
           <span class="set-label">全站字体大小</span>
           <div class="set-options">
-            <span class="options" @click="store.changeFontSize(false)"> - </span>
+            <span
+              class="options"
+              @click="store.changeFontSize(false)"
+            > - </span>
             <span class="num">{{ fontSize }}</span>
-            <span class="options" @click="store.changeFontSize(true)"> + </span>
+            <span
+              class="options"
+              @click="store.changeFontSize(true)"
+            > + </span>
           </div>
         </div>
         <span class="title">壁纸个性化</span>
@@ -64,7 +73,10 @@
             </span>
           </div>
         </div>
-        <div v-if="backgroundType === 'image'" class="set-item">
+        <div
+          v-if="backgroundType === 'image'"
+          class="set-item"
+        >
           <span class="set-label">背景图片地址</span>
           <div class="set-options">
             <input
@@ -73,7 +85,7 @@
               pattern="https?://.+"
               title="请输入有效的网址，例如：http://www.example.com"
               required
-            />
+            >
           </div>
         </div>
         <span class="title">首页样式</span>

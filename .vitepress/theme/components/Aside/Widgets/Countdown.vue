@@ -7,9 +7,18 @@
       <span class="time"> {{ getDaysUntil(theme.aside.countDown.data.date) }} </span>
       <span class="date">{{ theme.aside.countDown.data.date }}</span>
     </div>
-    <div v-if="remainData" class="count-right">
-      <div v-for="(item, tag, index) in remainData" :key="index" class="count-item">
-        <div class="item-name">{{ item.name }}</div>
+    <div
+      v-if="remainData"
+      class="count-right"
+    >
+      <div
+        v-for="(item, tag, index) in remainData"
+        :key="index"
+        class="count-item"
+      >
+        <div class="item-name">
+          {{ item.name }}
+        </div>
         <div class="item-progress">
           <div
             class="progress-bar"

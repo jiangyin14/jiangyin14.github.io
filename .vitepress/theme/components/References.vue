@@ -1,8 +1,11 @@
 <!-- 参考资料 -->
 <template>
-  <div v-if="references" class="references s-card">
+  <div
+    v-if="references"
+    class="references s-card"
+  >
     <div class="title">
-      <i class="iconfont icon-quote"></i>
+      <i class="iconfont icon-quote" />
       <span class="title-text">参考资料</span>
     </div>
     <ul class="list">
@@ -14,7 +17,7 @@
         target="_blank"
       >
         <span class="item-title">{{ item.title }}</span>
-    </a>
+      </a>
     </ul>
   </div>
 </template>

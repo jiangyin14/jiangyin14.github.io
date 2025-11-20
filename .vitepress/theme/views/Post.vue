@@ -1,6 +1,9 @@
 <!-- 文章页面 -->
 <template>
-  <div v-if="postMetaData" class="post">
+  <div
+    v-if="postMetaData"
+    class="post"
+  >
     <div class="post-meta">
       <div class="meta">
         <div class="categories">
@@ -41,29 +44,47 @@
         <!-- 热度 -->
         <span class="hot meta">
           <i class="iconfont icon-fire" />
-          <span id="twikoo_visitors" class="artalk-pv-count">0</span>
+          <span
+            id="twikoo_visitors"
+            class="artalk-pv-count"
+          >0</span>
         </span>
         <!-- 评论数 -->
-        <span class="chat meta hover" @click="commentRef?.scrollToComments">
+        <span
+          class="chat meta hover"
+          @click="commentRef?.scrollToComments"
+        >
           <i class="iconfont icon-chat" />
-          <span id="twikoo_comments" class="artalk-comment-count">0</span>
+          <span
+            id="twikoo_comments"
+            class="artalk-comment-count"
+          >0</span>
         </span>
       </div>
     </div>
     <div class="post-content">
       <article class="post-article s-card">
         <!-- 过期提醒 -->
-        <div class="expired s-card" v-if="postMetaData?.expired >= 180">
+        <div
+          v-if="postMetaData?.expired >= 180"
+          class="expired s-card"
+        >
           本文发表于 <strong>{{ postMetaData?.expired }}</strong> 天前，其中的信息可能已经事过境迁
         </div>
         <!-- AI 摘要 -->
         <ArticleGPT />
         <!-- 文章内容 -->
-        <Content id="page-content" class="markdown-main-style" />
+        <Content
+          id="page-content"
+          class="markdown-main-style"
+        />
         <!-- 参考资料 -->
         <References />
         <!-- 版权 -->
-        <Copyright v-if="frontmatter.copyright !== false" :postData="postMetaData" />
+        <Copyright
+          v-if="frontmatter.copyright !== false"
+          :post-data="postMetaData"
+        />
         <!-- 其他信息 -->
         <div class="other-meta">
           <div class="all-tags">
@@ -94,7 +115,7 @@
         <!-- 评论 -->
         <Comments ref="commentRef" />
       </article>
-      <Aside showToc />
+      <Aside show-toc />
     </div>
   </div>
 </template>

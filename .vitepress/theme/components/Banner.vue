@@ -1,15 +1,34 @@
 <template>
-  <div v-if="type === 'text'" :class="['banner', bannerType]" id="main-banner">
-    <h1 class="title">你好，欢迎来到{{ theme.siteMeta.title }}</h1>
+  <div
+    v-if="type === 'text'"
+    id="main-banner"
+    :class="['banner', bannerType]"
+  >
+    <h1 class="title">
+      你好，欢迎来到{{ theme.siteMeta.title }}
+    </h1>
     <div class="subtitle">
-      <Transition name="fade" mode="out-in">
-        <span :key="hitokotoData?.hitokoto" class="text">
+      <Transition
+        name="fade"
+        mode="out-in"
+      >
+        <span
+          :key="hitokotoData?.hitokoto"
+          class="text"
+        >
           {{ hitokotoData?.hitokoto ? hitokotoData?.hitokoto : theme.siteMeta.description }}
         </span>
       </Transition>
     </div>
-    <Transition name="fade" mode="out-in">
-      <i v-if="height === 'full'" class="iconfont icon-up" @click="scrollToHome" />
+    <Transition
+      name="fade"
+      mode="out-in"
+    >
+      <i
+        v-if="height === 'full'"
+        class="iconfont icon-up"
+        @click="scrollToHome"
+      />
     </Transition>
   </div>
   <div

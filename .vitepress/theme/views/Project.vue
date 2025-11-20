@@ -8,8 +8,12 @@
       image="https://pic.efefee.cn/uploads/2024/02/27/65dd8dae6043c.webp"
     >
       <template #footer-slot>
-        <a class="to-github" href="https://github.com/imsyy/" target="_blank">
-          <i class="iconfont icon-github"></i>
+        <a
+          class="to-github"
+          href="https://github.com/imsyy/"
+          target="_blank"
+        >
+          <i class="iconfont icon-github" />
           <span>前往 Github</span>
         </a>
       </template>

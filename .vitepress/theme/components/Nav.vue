@@ -4,10 +4,17 @@
       <div class="nav-all">
         <!-- 导航栏左侧 -->
         <div class="left-nav">
-          <div class="more-menu nav-btn" title="更多内容">
+          <div
+            class="more-menu nav-btn"
+            title="更多内容"
+          >
             <i class="iconfont icon-menu" />
             <div class="more-card s-card">
-              <div v-for="(item, index) in theme.navMore" :key="index" class="more-item">
+              <div
+                v-for="(item, index) in theme.navMore"
+                :key="index"
+                class="more-item"
+              >
                 <span class="more-name">{{ item.name }}</span>
                 <div class="more-list">
                   <a
@@ -17,36 +24,56 @@
                     class="more-link"
                     target="_blank"
                   >
-                    <img class="link-icon" :src="link.icon" :alt="link.name" />
+                    <img
+                      class="link-icon"
+                      :src="link.icon"
+                      :alt="link.name"
+                    >
                     <span class="link-name">{{ link.name }}</span>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="site-name" @click="router.go('/')">
+          <div
+            class="site-name"
+            @click="router.go('/')"
+          >
             {{ site.title }}
           </div>
         </div>
         <!-- 导航栏菜单 -->
         <div class="nav-center">
           <div class="site-menu">
-            <div v-for="(item, index) in theme.nav" :key="index" class="menu-item">
+            <div
+              v-for="(item, index) in theme.nav"
+              :key="index"
+              class="menu-item"
+            >
               <span class="link-btn"> {{ item.text }}</span>
-              <div v-if="item.items" class="link-child">
+              <div
+                v-if="item.items"
+                class="link-child"
+              >
                 <span
                   v-for="(child, childIndex) in item.items"
                   :key="childIndex"
                   class="link-child-btn"
                   @click="router.go(child.link)"
                 >
-                  <i v-if="child.icon" :class="`iconfont icon-${child.icon}`" />
+                  <i
+                    v-if="child.icon"
+                    :class="`iconfont icon-${child.icon}`"
+                  />
                   {{ child.text }}
                 </span>
               </div>
             </div>
           </div>
-          <span class="site-title" @click="smoothScrolling">
+          <span
+            class="site-title"
+            @click="smoothScrolling"
+          >
             {{ (frontmatter.home ? site.description : page.title) || site.description }}
           </span>
         </div>
@@ -58,7 +85,7 @@
             href="https://www.travellings.cn/go.html"
             target="_blank"
           >
-            <i class="iconfont icon-subway"></i>
+            <i class="iconfont icon-subway" />
           </a>
           <!-- 随机文章 -->
           <div
@@ -66,7 +93,7 @@
             title="随机前往一篇文章"
             @click="router.go(shufflePost(theme.postData))"
           >
-            <i class="iconfont icon-shuffle"></i>
+            <i class="iconfont icon-shuffle" />
           </div>
           <!-- 搜索 -->
           <div
@@ -75,7 +102,7 @@
             title="全站搜索"
             @click="store.changeShowStatus('searchShow')"
           >
-            <i class="iconfont icon-search"></i>
+            <i class="iconfont icon-search" />
           </div>
           <!-- 中控台 -->
           <div
@@ -97,12 +124,18 @@
             @click="smoothScrolling"
           >
             <div class="to-top-btn">
-              <Transition name="fade" mode="out-in">
-                <span :key="scrollData.percentage > 90" class="num">
+              <Transition
+                name="fade"
+                mode="out-in"
+              >
+                <span
+                  :key="scrollData.percentage > 90"
+                  class="num"
+                >
                   {{ scrollData.percentage <= 90 ? scrollData.percentage : "返回顶部" }}
                 </span>
               </Transition>
-              <i class="iconfont icon-up"></i>
+              <i class="iconfont icon-up" />
             </div>
           </div>
           <!-- 移动端菜单 -->

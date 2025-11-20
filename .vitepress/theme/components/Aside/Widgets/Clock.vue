@@ -1,9 +1,18 @@
 <template>
   <div class="clock">
     <div class="clock-content">
-      <div :style="{ transform: ` rotate(${hourRotate}deg)` }" class="pointer hour" />
-      <div :style="{ transform: ` rotate(${minuteRotate}deg)` }" class="pointer minute" />
-      <div :style="{ transform: ` rotate(${secondRotate}deg)` }" class="pointer second" />
+      <div
+        :style="{ transform: ` rotate(${hourRotate}deg)` }"
+        class="pointer hour"
+      />
+      <div
+        :style="{ transform: ` rotate(${minuteRotate}deg)` }"
+        class="pointer minute"
+      />
+      <div
+        :style="{ transform: ` rotate(${secondRotate}deg)` }"
+        class="pointer second"
+      />
     </div>
   </div>
 </template>

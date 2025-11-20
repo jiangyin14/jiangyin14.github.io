@@ -2,7 +2,11 @@
   <div class="copyright s-card">
     <div class="title">
       <span class="post-name">{{ postData?.title || "未命名文章" }}</span>
-      <a :href="theme.siteMeta.site + route.path" class="post-link" target="_blank">
+      <a
+        :href="theme.siteMeta.site + route.path"
+        class="post-link"
+        target="_blank"
+      >
         {{ theme.siteMeta.site + route.path }}
       </a>
     </div>

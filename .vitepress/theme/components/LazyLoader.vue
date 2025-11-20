@@ -1,10 +1,22 @@
 <!-- 懒加载 -->
 <template>
-  <div v-if="!load" ref="box" :style="{ height, width }" class="loading" />
+  <div
+    v-if="!load"
+    ref="box"
+    :style="{ height, width }"
+    class="loading"
+  />
   <slot v-else />
-  <div v-if="useFriendsLink" class="hidden">
+  <div
+    v-if="useFriendsLink"
+    class="hidden"
+  >
     <!-- 适配友链朋友圈 -->
-    <img :data-lazy-src="useFriendsLink" class="cf-friends-avatar" alt="cover" />
+    <img
+      :data-lazy-src="useFriendsLink"
+      class="cf-friends-avatar"
+      alt="cover"
+    >
   </div>
 </template>
 

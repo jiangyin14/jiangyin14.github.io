@@ -54,7 +54,7 @@ const markdownConfig = (md, themeConfig) => {
     render: (tokens, idx, _options) => {
       const token = tokens[idx];
       if (token.nesting === 1) {
-        return `<div class="card">`;
+        return "<div class=\"card\">";
       } else {
         return "</div>";
       }
@@ -62,7 +62,7 @@ const markdownConfig = (md, themeConfig) => {
   });
   // 表格
   md.renderer.rules.table_open = () => {
-    return '<div class="table-container"><table>';
+    return "<div class=\"table-container\"><table>";
   };
   md.renderer.rules.table_close = () => {
     return "</table></div>";
@@ -89,24 +89,24 @@ const markdownConfig = (md, themeConfig) => {
     const lang = token.info.trim();
 
     // 处理 Obsidian admonition
-    if (lang.startsWith('ad-')) {
+    if (lang.startsWith("ad-")) {
       const type = lang.substring(3); // 取ad-之后的内容，获取类型
       const content = token.content;
 
       const admonitionTypes = {
-        'note': 'info',
-        'question': 'info',
-        'warning': 'warning',
-        'tip': 'tip',
-        'summary': 'info',
-        'hint': 'tip',
-        'important': 'warning',
-        'caution': 'warning',
-        'error': 'danger',
-        'danger': 'danger'
+        "note": "info",
+        "question": "info",
+        "warning": "warning",
+        "tip": "tip",
+        "summary": "info",
+        "hint": "tip",
+        "important": "warning",
+        "caution": "warning",
+        "error": "danger",
+        "danger": "danger"
       };
 
-      const className = admonitionTypes[type] || 'info';
+      const className = admonitionTypes[type] || "info";
       const title = type.toUpperCase();
 
       return `<div class="${className} custom-block">

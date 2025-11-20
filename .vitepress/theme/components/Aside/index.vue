@@ -1,11 +1,23 @@
 <template>
   <aside class="main-aside">
-    <Hello v-if="theme.aside.hello.enable" class="weidgets" />
+    <Hello
+      v-if="theme.aside.hello.enable"
+      class="weidgets"
+    />
     <div class="sticky">
-      <Toc v-if="theme.aside.toc.enable && showToc" class="weidgets" />
+      <Toc
+        v-if="theme.aside.toc.enable && showToc"
+        class="weidgets"
+      />
       <Countdown class="weidgets" />
-      <Tags v-if="theme.aside.tags.enable" class="weidgets" />
-      <SiteData v-if="theme.aside.siteData.enable" class="weidgets" />
+      <Tags
+        v-if="theme.aside.tags.enable"
+        class="weidgets"
+      />
+      <SiteData
+        v-if="theme.aside.siteData.enable"
+        class="weidgets"
+      />
     </div>
   </aside>
 </template>

@@ -1,7 +1,14 @@
 <!-- 全局播放器 -->
 <template>
-  <div v-if="playerShow" :class="['player', { playing: playState }]" @click="player?.toggle()">
-    <div ref="playerDom" class="player-content" />
+  <div
+    v-if="playerShow"
+    :class="['player', { playing: playState }]"
+    @click="player?.toggle()"
+  >
+    <div
+      ref="playerDom"
+      class="player-content"
+    />
   </div>
 </template>
 

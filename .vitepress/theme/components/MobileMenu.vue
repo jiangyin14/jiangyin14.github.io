@@ -1,34 +1,62 @@
 <template>
   <Teleport to="body">
     <!-- 移动端菜单 -->
-    <Transition name="fade" mode="out-in">
-      <div v-show="store.mobileMenuShow" class="mobile-menu">
+    <Transition
+      name="fade"
+      mode="out-in"
+    >
+      <div
+        v-show="store.mobileMenuShow"
+        class="mobile-menu"
+      >
         <!-- 背景遮罩 -->
-        <div class="menu-mask" @click="store.changeShowStatus('mobileMenuShow')" />
-        <Transition name="toLeft" mode="out-in">
-          <div v-show="store.mobileMenuShow" class="menu-content s-card">
+        <div
+          class="menu-mask"
+          @click="store.changeShowStatus('mobileMenuShow')"
+        />
+        <Transition
+          name="toLeft"
+          mode="out-in"
+        >
+          <div
+            v-show="store.mobileMenuShow"
+            class="menu-content s-card"
+          >
             <!-- 关闭按钮 -->
-            <div class="close-control" @click="store.changeShowStatus('mobileMenuShow')">
-              <i class="iconfont icon-close"></i>
+            <div
+              class="close-control"
+              @click="store.changeShowStatus('mobileMenuShow')"
+            >
+              <i class="iconfont icon-close" />
             </div>
             <!-- 菜单 -->
             <div class="menu-list">
-              <div v-for="(item, index) in nav" :key="index" class="menu-item">
+              <div
+                v-for="(item, index) in nav"
+                :key="index"
+                class="menu-item"
+              >
                 <span class="link-title"> {{ item.text }}</span>
-                <div v-if="item.items" class="link-child">
+                <div
+                  v-if="item.items"
+                  class="link-child"
+                >
                   <div
                     v-for="(child, childIndex) in item.items"
                     :key="childIndex"
                     class="link-child-btn"
                     @click="pageJump(child.link)"
                   >
-                    <i v-if="child.icon" :class="`iconfont icon-${child.icon}`" />
+                    <i
+                      v-if="child.icon"
+                      :class="`iconfont icon-${child.icon}`"
+                    />
                     <span class="name">{{ child.text }}</span>
                   </div>
                 </div>
               </div>
             </div>
-            <hr />
+            <hr>
             <!-- 标签 -->
             <div class="tags-list menu-item">
               <span class="link-title"> 标签</span>

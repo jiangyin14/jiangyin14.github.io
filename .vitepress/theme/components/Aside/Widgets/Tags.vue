@@ -2,7 +2,7 @@
 <template>
   <div class="tags-cloud s-card">
     <div class="title">
-      <i class="iconfont icon-hashtag"></i>
+      <i class="iconfont icon-hashtag" />
       <span class="title-name">热门标签</span>
     </div>
     <div class="all-tags">
@@ -16,7 +16,10 @@
         <sup class="num">{{ item.count }}</sup>
       </a>
     </div>
-    <a href="/pages/tags" class="more-tags">查看全部</a>
+    <a
+      href="/pages/tags"
+      class="more-tags"
+    >查看全部</a>
   </div>
 </template>
 

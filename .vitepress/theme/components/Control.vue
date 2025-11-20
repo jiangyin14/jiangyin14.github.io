@@ -1,41 +1,59 @@
 <!-- 中控台 -->
 <template>
   <Teleport to="body">
-    <Transition name="fade" mode="out-in" @before-enter="changeCloseStyle">
-      <div v-if="store.controlShow" class="control" @click="store.changeShowStatus('controlShow')">
+    <Transition
+      name="fade"
+      mode="out-in"
+      @before-enter="changeCloseStyle"
+    >
+      <div
+        v-if="store.controlShow"
+        class="control"
+        @click="store.changeShowStatus('controlShow')"
+      >
         <!-- 关闭按钮 -->
-        <div ref="closeControlRef" class="close-control">
-          <i class="iconfont icon-close"></i>
+        <div
+          ref="closeControlRef"
+          class="close-control"
+        >
+          <i class="iconfont icon-close" />
         </div>
         <!-- 背景遮罩 -->
         <div class="control-mask" />
         <!-- 中控台内容 -->
-        <div class="control-content" @click.stop>
+        <div
+          class="control-content"
+          @click.stop
+        >
           <!-- 功能菜单 -->
           <div class="menu">
-            <div class="menu-item open" title="显示模式切换" @click.stop="store.changeThemeType">
-              <i :class="`iconfont icon-${store.themeType}`"></i>
+            <div
+              class="menu-item open"
+              title="显示模式切换"
+              @click.stop="store.changeThemeType"
+            >
+              <i :class="`iconfont icon-${store.themeType}`" />
             </div>
             <div
               :class="['menu-item', { open: store.useRightMenu }]"
               title="右键菜单开关"
               @click.stop="rightMenuSwitch"
             >
-              <i class="iconfont icon-list"></i>
+              <i class="iconfont icon-list" />
             </div>
             <div
               :class="['menu-item', { open: store.playerShow }]"
               title="播放器开关"
               @click.stop="store.playerShow = !store.playerShow"
             >
-              <i class="iconfont icon-music"></i>
+              <i class="iconfont icon-music" />
             </div>
             <div
               :class="['menu-item', { open: store.backgroundBlur }]"
               title="背景模糊开关"
               @click.stop="store.changeShowStatus('backgroundBlur')"
             >
-              <i class="iconfont icon-blur"></i>
+              <i class="iconfont icon-blur" />
             </div>
           </div>
         </div>

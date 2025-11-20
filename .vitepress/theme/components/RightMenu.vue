@@ -1,7 +1,10 @@
 <template>
   <Teleport to="body">
     <!-- 右键菜单 -->
-    <Transition name="fade" mode="out-in">
+    <Transition
+      name="fade"
+      mode="out-in"
+    >
       <div
         v-if="rightMenuShow"
         class="right-menu"
@@ -9,26 +12,42 @@
         @contextmenu.stop="closeRightMenu"
       >
         <div
+          ref="rightMenuRef"
           :style="{
             left: rightMenuX + 'px',
             top: rightMenuY + 'px',
           }"
-          ref="rightMenuRef"
           class="menu-content s-card hover"
           @contextmenu.stop="closeRightMenu"
         >
           <div class="tools">
-            <div class="btn" title="后退" @click="rightMenuFunc('back')">
-              <i class="iconfont icon-left"></i>
+            <div
+              class="btn"
+              title="后退"
+              @click="rightMenuFunc('back')"
+            >
+              <i class="iconfont icon-left" />
             </div>
-            <div class="btn" title="前进" @click="rightMenuFunc('forward')">
-              <i class="iconfont icon-right"></i>
+            <div
+              class="btn"
+              title="前进"
+              @click="rightMenuFunc('forward')"
+            >
+              <i class="iconfont icon-right" />
             </div>
-            <div class="btn" title="刷新" @click="rightMenuFunc('reload')">
-              <i class="iconfont icon-refresh"></i>
+            <div
+              class="btn"
+              title="刷新"
+              @click="rightMenuFunc('reload')"
+            >
+              <i class="iconfont icon-refresh" />
             </div>
-            <div class="btn" title="返回顶部" @click="smoothScrolling">
-              <i class="iconfont icon-arrow-up"></i>
+            <div
+              class="btn"
+              title="返回顶部"
+              @click="smoothScrolling"
+            >
+              <i class="iconfont icon-arrow-up" />
             </div>
           </div>
           <div class="all-menu">
@@ -37,7 +56,7 @@
               class="btn"
               @click="router.go(shufflePost(theme.postData))"
             >
-              <i class="iconfont icon-shuffle"></i>
+              <i class="iconfont icon-shuffle" />
               <span class="name">随便逛逛</span>
             </div>
             <div
@@ -45,16 +64,24 @@
               class="btn"
               @click="router.go('/pages/categories')"
             >
-              <i class="iconfont icon-folder"></i>
+              <i class="iconfont icon-folder" />
               <span class="name">全部分类</span>
             </div>
-            <div v-if="clickedType === 'normal'" class="btn" @click="router.go('/pages/tags')">
-              <i class="iconfont icon-hashtag"></i>
+            <div
+              v-if="clickedType === 'normal'"
+              class="btn"
+              @click="router.go('/pages/tags')"
+            >
+              <i class="iconfont icon-hashtag" />
               <span class="name">全部标签</span>
             </div>
             <!-- 链接类型 -->
-            <div v-if="clickedType === 'link'" class="btn" @click="rightMenuFunc('open-link')">
-              <i class="iconfont icon-window"></i>
+            <div
+              v-if="clickedType === 'link'"
+              class="btn"
+              @click="rightMenuFunc('open-link')"
+            >
+              <i class="iconfont icon-window" />
               <span class="name">新标签页打开</span>
             </div>
             <div
@@ -64,7 +91,7 @@
                 copyText(clickedTypeData?.getAttribute('original-href') || clickedTypeData?.href)
               "
             >
-              <i class="iconfont icon-link"></i>
+              <i class="iconfont icon-link" />
               <span class="name">复制链接地址</span>
             </div>
             <!-- 图片类型 -->
@@ -73,7 +100,7 @@
               class="btn"
               @click="copyImage(clickedTypeData?.src)"
             >
-              <i class="iconfont icon-image-copy"></i>
+              <i class="iconfont icon-image-copy" />
               <span class="name">复制此图片</span>
             </div>
             <div
@@ -81,7 +108,7 @@
               class="btn"
               @click="downloadImage(clickedTypeData?.src)"
             >
-              <i class="iconfont icon-download"></i>
+              <i class="iconfont icon-download" />
               <span class="name">下载此图片</span>
             </div>
             <!-- 输入框 -->
@@ -90,7 +117,7 @@
               class="btn"
               @click="rightMenuFunc('input-paste')"
             >
-              <i class="iconfont icon-paste"></i>
+              <i class="iconfont icon-paste" />
               <span class="name">粘贴文本</span>
             </div>
             <!-- 选中文本 -->
@@ -100,7 +127,7 @@
               class="btn right-menu-link"
               target="_blank"
             >
-              <i class="iconfont icon-link"></i>
+              <i class="iconfont icon-link" />
               <span class="name">在新标签页打开</span>
             </a>
             <a
@@ -109,7 +136,7 @@
               class="btn right-menu-link"
               target="_blank"
             >
-              <i class="iconfont icon-baidu"></i>
+              <i class="iconfont icon-baidu" />
               <span class="name">使用百度搜索</span>
             </a>
             <a
@@ -118,7 +145,7 @@
               class="btn right-menu-link"
               target="_blank"
             >
-              <i class="iconfont icon-bing"></i>
+              <i class="iconfont icon-bing" />
               <span class="name">使用必应搜索</span>
             </a>
             <div
@@ -126,7 +153,7 @@
               class="btn"
               @click="copyText(clickedTypeData)"
             >
-              <i class="iconfont icon-copy"></i>
+              <i class="iconfont icon-copy" />
               <span class="name">复制选中文本</span>
             </div>
             <div
@@ -134,31 +161,43 @@
               class="btn"
               @click="commentCopy(clickedTypeData)"
             >
-              <i class="iconfont icon-chat"></i>
+              <i class="iconfont icon-chat" />
               <span class="name">评论选中内容</span>
             </div>
           </div>
           <!-- 通用菜单 -->
           <div class="all-menu general">
             <!-- 版权协议 -->
-            <div class="btn" @click="router.go('/pages/cc')">
-              <i class="iconfont icon-accessible"></i>
+            <div
+              class="btn"
+              @click="router.go('/pages/cc')"
+            >
+              <i class="iconfont icon-accessible" />
               <span class="name">版权协议</span>
             </div>
             <!-- 隐私政策 -->
-            <div class="btn" @click="router.go('/pages/privacy')">
-              <i class="iconfont icon-privacy"></i>
+            <div
+              class="btn"
+              @click="router.go('/pages/privacy')"
+            >
+              <i class="iconfont icon-privacy" />
               <span class="name">隐私政策</span>
             </div>
           </div>
           <div class="all-menu general">
             <!-- 复制地址 -->
-            <div class="btn" @click="rightMenuFunc('copy-link')">
-              <i class="iconfont icon-copy"></i>
+            <div
+              class="btn"
+              @click="rightMenuFunc('copy-link')"
+            >
+              <i class="iconfont icon-copy" />
               <span class="name">复制本页地址</span>
             </div>
             <!-- 明暗模式 -->
-            <div class="btn" @click.stop="store.changeThemeType">
+            <div
+              class="btn"
+              @click.stop="store.changeThemeType"
+            >
               <i
                 :class="`iconfont icon-${themeType === 'auto' ? 'dark' : themeType === 'dark' ? 'light' : 'auto'}`"
               />
@@ -170,34 +209,64 @@
             </div>
           </div>
           <!-- 播放器控制 -->
-          <div v-if="playerShow" class="all-menu general player">
+          <div
+            v-if="playerShow"
+            class="all-menu general player"
+          >
             <div class="data">
               <span class="name">{{ playerData.name }}</span>
               <span class="artist">{{ playerData.artist }}</span>
             </div>
-            <div class="volume" @click.stop>
+            <div
+              class="volume"
+              @click.stop
+            >
               <i
                 class="iconfont icon-volume-down"
                 @click="playerVolume = Math.max(0, playerVolume - 0.1)"
               />
-              <Slider :value="playerVolume" @update="(val) => (playerVolume = val)" />
+              <Slider
+                :value="playerVolume"
+                @update="(val) => (playerVolume = val)"
+              />
               <i
                 class="iconfont icon-volume-up"
                 @click="playerVolume = Math.min(1, playerVolume + 0.1)"
               />
             </div>
-            <div class="control" @click.stop>
-              <div class="btn" title="上一曲" @click="playerControl('prev')">
-                <i class="iconfont icon-prev"></i>
+            <div
+              class="control"
+              @click.stop
+            >
+              <div
+                class="btn"
+                title="上一曲"
+                @click="playerControl('prev')"
+              >
+                <i class="iconfont icon-prev" />
               </div>
-              <div v-if="playState" class="btn" title="暂停" @click="playerControl('toggle')">
-                <i class="iconfont icon-pause"></i>
+              <div
+                v-if="playState"
+                class="btn"
+                title="暂停"
+                @click="playerControl('toggle')"
+              >
+                <i class="iconfont icon-pause" />
               </div>
-              <div v-else class="btn" title="播放" @click="playerControl('toggle')">
-                <i class="iconfont icon-play"></i>
+              <div
+                v-else
+                class="btn"
+                title="播放"
+                @click="playerControl('toggle')"
+              >
+                <i class="iconfont icon-play" />
               </div>
-              <div class="btn" title="下一曲" @click="playerControl('next')">
-                <i class="iconfont icon-next"></i>
+              <div
+                class="btn"
+                title="下一曲"
+                @click="playerControl('next')"
+              >
+                <i class="iconfont icon-next" />
               </div>
             </div>
           </div>
@@ -208,7 +277,7 @@
     <Modal
       :show="commentCopyShow"
       title="快速评论"
-      titleIcon="chat"
+      title-icon="chat"
       @mask-click="commentCopyClose"
       @modal-close="commentCopyClose"
     >

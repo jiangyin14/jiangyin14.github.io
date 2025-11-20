@@ -1,7 +1,12 @@
 <template>
   <div class="about">
-    <h1 class="title">关于本站</h1>
-    <div class="about-content" style="grid-template-columns: 3fr 2fr">
+    <h1 class="title">
+      关于本站
+    </h1>
+    <div
+      class="about-content"
+      style="grid-template-columns: 3fr 2fr"
+    >
       <!-- 介绍 -->
       <div class="about-item hello">
         <span class="text1">你好，很高兴认识你👋</span>
@@ -16,7 +21,10 @@
         <span class="title2">优秀的作品</span>
       </div>
     </div>
-    <div class="about-content" style="grid-template-columns: 2fr 3fr">
+    <div
+      class="about-content"
+      style="grid-template-columns: 2fr 3fr"
+    >
       <!-- 技能 -->
       <div class="about-item skills">
         <span class="tip">技能</span>
@@ -31,7 +39,7 @@
             target="_blank"
           >
             <div class="skills-logo">
-              <i :class="`iconfont icon-${item.icon}`"></i>
+              <i :class="`iconfont icon-${item.icon}`" />
             </div>
             <span class="skills-name">{{ item.name }}</span>
           </a>
@@ -44,27 +52,48 @@
           <i>無限進步</i>
         </span>
         <div class="list">
-          <span class="list-item" style="--color: #357ef5">ZZRVTC · 计算机应用技术</span>
-          <span class="list-item" style="--color: #eb372a">FE · 前端开发工程师</span>
+          <span
+            class="list-item"
+            style="--color: #357ef5"
+          >ZZRVTC · 计算机应用技术</span>
+          <span
+            class="list-item"
+            style="--color: #eb372a"
+          >FE · 前端开发工程师</span>
         </div>
         <img
           class="career-img"
           src="https://pic.efefee.cn/uploads/2024/02/22/65d71db18bcf9.png"
           alt="career"
-        />
+        >
       </div>
     </div>
-    <div class="about-content" style="grid-template-columns: 3fr 2fr">
+    <div
+      class="about-content"
+      style="grid-template-columns: 3fr 2fr"
+    >
       <!-- 性格 -->
-      <div class="about-item character" style="--color: #4298b4">
+      <div
+        class="about-item character"
+        style="--color: #4298b4"
+      >
         <span class="tip">性格</span>
         <span class="title2">物流师</span>
-        <span class="title2" style="color: var(--color)">ISTJ-A / ISTJ-T</span>
+        <span
+          class="title2"
+          style="color: var(--color)"
+        >ISTJ-A / ISTJ-T</span>
         <span class="more">
           在
-          <a href="https://www.16personalities.com/ch/" target="_blank">16personalities</a>
+          <a
+            href="https://www.16personalities.com/ch/"
+            target="_blank"
+          >16personalities</a>
           了解更多关于
-          <a href="https://www.16personalities.com/ch/istj-%E4%BA%BA%E6%A0%BC" target="_blank">
+          <a
+            href="https://www.16personalities.com/ch/istj-%E4%BA%BA%E6%A0%BC"
+            target="_blank"
+          >
             物流师
           </a>
         </span>
@@ -72,16 +101,22 @@
           src="https://pic.efefee.cn/uploads/2024/02/22/65d6bc7ae72ae.png"
           alt="male"
           class="male"
-        />
+        >
       </div>
       <!-- 座右铭 -->
       <div class="about-item">
         <span class="tip">座右铭</span>
-        <span class="title1" style="margin-top: 20px">脚踏实地，</span>
+        <span
+          class="title1"
+          style="margin-top: 20px"
+        >脚踏实地，</span>
         <span class="title2">一丝不苟。</span>
       </div>
     </div>
-    <div class="about-content" style="grid-template-columns: 1fr 1fr">
+    <div
+      class="about-content"
+      style="grid-template-columns: 1fr 1fr"
+    >
       <div
         class="about-item like image"
         style="
@@ -113,7 +148,10 @@
         </div>
       </div>
     </div>
-    <div class="about-content" style="grid-template-columns: 2fr 3fr">
+    <div
+      class="about-content"
+      style="grid-template-columns: 2fr 3fr"
+    >
       <!-- 数据 -->
       <div
         class="about-item static image"
@@ -126,14 +164,21 @@
           <span class="tip">数据</span>
           <span class="title2">访问统计</span>
           <div class="static-data">
-            <div v-for="(item, key, index) in statisticsData" :key="index" class="static-item">
+            <div
+              v-for="(item, key, index) in statisticsData"
+              :key="index"
+              class="static-item"
+            >
               <span class="static-name">{{ key }}</span>
               <span class="static-num">{{ item }}</span>
             </div>
           </div>
           <div class="image-desc opacity">
             <span class="left">
-              统计信息来自 <a href="https://v6.51.la/" target="_blank">51la</a>
+              统计信息来自 <a
+                href="https://v6.51.la/"
+                target="_blank"
+              >51la</a>
             </span>
           </div>
         </div>
@@ -149,17 +194,26 @@
         <div class="about-item info">
           <div class="info-item">
             <span class="info-name">生于</span>
-            <span class="info-num" style="--color: #43a6c6">2001</span>
+            <span
+              class="info-num"
+              style="--color: #43a6c6"
+            >2001</span>
           </div>
           <div class="info-item">
             <span class="info-name">现在职业</span>
-            <span class="info-num" style="--color: #dfac46">前端开发工程师</span>
+            <span
+              class="info-num"
+              style="--color: #dfac46"
+            >前端开发工程师</span>
           </div>
         </div>
       </div>
     </div>
     <!-- 心路历程 -->
-    <div class="about-content" style="display: flex">
+    <div
+      class="about-content"
+      style="display: flex"
+    >
       <div class="about-item">
         <span class="tip">心路历程</span>
         <span class="title2">为什么建站？</span>

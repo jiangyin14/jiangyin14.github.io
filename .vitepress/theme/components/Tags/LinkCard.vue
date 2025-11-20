@@ -1,28 +1,55 @@
 <!-- 链接卡片 -->
 <template>
-  <a :href="url" :target="isOutLink ? '_blank' : null" class="link-card s-card hover">
-    <span v-if="isOutLink" class="link-tip">引用站外地址，请注意甄别链接安全性</span>
+  <a
+    :href="url"
+    :target="isOutLink ? '_blank' : null"
+    class="link-card s-card hover"
+  >
+    <span
+      v-if="isOutLink"
+      class="link-tip"
+    >引用站外地址，请注意甄别链接安全性</span>
     <div class="link-data">
       <div class="link-icon">
-        <img v-if="icon" class="link-img" :src="icon" alt="link-img" />
+        <img
+          v-if="icon"
+          class="link-img"
+          :src="icon"
+          alt="link-img"
+        >
         <img
           v-else-if="siteInfo?.iconUrl"
           :src="siteInfo.iconUrl"
           class="link-img"
           alt="link-img"
           @error="siteInfo.iconUrl = null"
+        >
+        <i
+          v-else
+          class="iconfont icon-link"
         />
-        <i v-else class="iconfont icon-link"></i>
       </div>
       <div class="link-desc">
         <!-- 标题 -->
-        <span v-if="title" class="link-title">{{ title }}</span>
-        <span v-else class="link-title">{{ siteInfo?.title || "暂无标题" }}</span>
+        <span
+          v-if="title"
+          class="link-title"
+        >{{ title }}</span>
+        <span
+          v-else
+          class="link-title"
+        >{{ siteInfo?.title || "暂无标题" }}</span>
         <!-- 描述 -->
-        <span v-if="desc" class="link-description">{{ desc }}</span>
-        <span v-else class="link-description">{{ siteInfo?.description || "暂无站点描述" }}</span>
+        <span
+          v-if="desc"
+          class="link-description"
+        >{{ desc }}</span>
+        <span
+          v-else
+          class="link-description"
+        >{{ siteInfo?.description || "暂无站点描述" }}</span>
       </div>
-      <i class="link-go iconfont icon-up"></i>
+      <i class="link-go iconfont icon-up" />
     </div>
   </a>
 </template>

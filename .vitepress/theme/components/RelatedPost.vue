@@ -1,15 +1,24 @@
 <!-- 相关文章 -->
 <template>
-  <div v-if="relatedData" class="related-post">
+  <div
+    v-if="relatedData"
+    class="related-post"
+  >
     <div class="title">
       <span class="name">
-        <i class="iconfont icon-star"></i>
+        <i class="iconfont icon-star" />
         相关推荐
       </span>
-      <span class="shuffle" @click="router.go(shufflePost(theme.postData))"> 随便逛逛 </span>
+      <span
+        class="shuffle"
+        @click="router.go(shufflePost(theme.postData))"
+      > 随便逛逛 </span>
     </div>
     <!-- 文章列表 -->
-    <PostList :listData="relatedData" simple />
+    <PostList
+      :list-data="relatedData"
+      simple
+    />
   </div>
 </template>
 

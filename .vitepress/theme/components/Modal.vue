@@ -1,9 +1,18 @@
 <!-- 弹窗组件 -->
 <template>
   <Teleport to="body">
-    <Transition name="fade" mode="out-in">
-      <div v-if="show" class="modal">
-        <div class="modal-mask" @click.stop="maskClick" />
+    <Transition
+      name="fade"
+      mode="out-in"
+    >
+      <div
+        v-if="show"
+        class="modal"
+      >
+        <div
+          class="modal-mask"
+          @click.stop="maskClick"
+        />
         <div
           :style="{
             maxWidth: typeof maxWidth === 'string' ? maxWidth : `${maxWidth}px`,
@@ -12,16 +21,29 @@
           @click.stop
         >
           <!-- 标题 -->
-          <div v-if="title" class="title">
+          <div
+            v-if="title"
+            class="title"
+          >
             <div class="title-left">
-              <i v-if="titleIcon" :class="`iconfont icon-${titleIcon}`"></i>
+              <i
+                v-if="titleIcon"
+                :class="`iconfont icon-${titleIcon}`"
+              />
               <span class="title-text">{{ title }}</span>
             </div>
             <!-- 关闭按钮 -->
-            <i v-if="showClose" class="iconfont icon-close close" @click="modalClose" />
+            <i
+              v-if="showClose"
+              class="iconfont icon-close close"
+              @click="modalClose"
+            />
           </div>
           <!-- 弹窗内容 -->
-          <div class="modal-content" :style="{ '--height': maxHeight + 'vh' }">
+          <div
+            class="modal-content"
+            :style="{ '--height': maxHeight + 'vh' }"
+          >
             <slot />
           </div>
         </div>

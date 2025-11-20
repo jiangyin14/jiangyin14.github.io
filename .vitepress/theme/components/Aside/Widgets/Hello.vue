@@ -1,11 +1,21 @@
 <!-- 侧边栏 - 欢迎 -->
 <template>
-  <div class="hello s-card" @mouseleave="resetHello">
+  <div
+    class="hello s-card"
+    @mouseleave="resetHello"
+  >
     <div class="content">
       <div class="site-logo">
-        <img :src="theme.siteMeta.logo" alt="author" class="author" />
+        <img
+          :src="theme.siteMeta.logo"
+          alt="author"
+          class="author"
+        >
       </div>
-      <span class="site-desc" v-html="theme.aside.hello.text" />
+      <span
+        class="site-desc"
+        v-html="theme.aside.hello.text"
+      />
     </div>
     <div class="info">
       <div class="name">
@@ -13,11 +23,19 @@
         <span class="desc">{{ theme.siteMeta.description }}</span>
       </div>
       <div class="link">
-        <a href="https://github.com/imsyy/" target="_blank" class="social-link">
-          <i class="iconfont icon-github"></i>
+        <a
+          href="https://github.com/imsyy/"
+          target="_blank"
+          class="social-link"
+        >
+          <i class="iconfont icon-github" />
         </a>
-        <a href="mailto:one@imsyy.top" target="_blank" class="social-link">
-          <i class="iconfont icon-email"></i>
+        <a
+          href="mailto:one@imsyy.top"
+          target="_blank"
+          class="social-link"
+        >
+          <i class="iconfont icon-email" />
         </a>
       </div>
     </div>

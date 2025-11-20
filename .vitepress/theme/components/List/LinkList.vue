@@ -1,17 +1,34 @@
 <template>
-  <Transition name="fade" mode="out-in">
-    <div v-if="listData?.length" class="link-list">
-      <div v-for="(type, index) in listData" :key="index" class="link-type-list">
+  <Transition
+    name="fade"
+    mode="out-in"
+  >
+    <div
+      v-if="listData?.length"
+      class="link-list"
+    >
+      <div
+        v-for="(type, index) in listData"
+        :key="index"
+        class="link-type-list"
+      >
         <div class="title">
           <h2 class="name">
             <span class="name-text">{{ type?.typeName || "未知分组" }}</span>
-            <span v-if="showCount" class="name-count">（{{ type?.typeList?.length || 0 }}）</span>
+            <span
+              v-if="showCount"
+              class="name-count"
+            >（{{ type?.typeList?.length || 0 }}）</span>
           </h2>
           <span class="tip">{{ type?.typeDesc || "分组暂无简介" }}</span>
         </div>
-        <div class="all-link" v-if="type?.typeList">
+        <div
+          v-if="type?.typeList"
+          class="all-link"
+        >
           <a
             v-for="(link, index) in type.typeList"
+            :key="index"
             :class="[
               'link-card',
               's-card',
@@ -20,18 +37,17 @@
                 'cf-friends-link': type?.type !== 'loss' && useFriendsLink,
               },
             ]"
-            :key="index"
             :href="type?.type !== 'loss' ? link.url : null"
             target="_blank"
           >
             <div class="cover">
-              <LazyLoader :useFriendsLink="link.avatar || link.ico">
+              <LazyLoader :use-friends-link="link.avatar || link.ico">
                 <img
                   :src="link.avatar || link.ico"
                   :class="['cover-img', { 'cf-friends-avatar': useFriendsLink }]"
                   :alt="link?.name || 'cover'"
                   @load="(e) => e.target.classList.add('loaded')"
-                />
+                >
               </LazyLoader>
             </div>
             <div class="data">
@@ -42,7 +58,12 @@
         </div>
       </div>
     </div>
-    <div v-else class="no-data">暂无友链数据</div>
+    <div
+      v-else
+      class="no-data"
+    >
+      暂无友链数据
+    </div>
   </Transition>
 </template>
 

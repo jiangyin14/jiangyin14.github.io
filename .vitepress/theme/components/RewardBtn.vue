@@ -1,38 +1,66 @@
 <!-- 打赏按钮 -->
 <template>
-  <div v-if="rewardData.enable" class="reward">
-    <div class="reward-btn" @click="rewardShow = true">
+  <div
+    v-if="rewardData.enable"
+    class="reward"
+  >
+    <div
+      class="reward-btn"
+      @click="rewardShow = true"
+    >
       <i class="iconfont icon-reward" />
       <span class="text">赞赏博主</span>
     </div>
     <!-- 设置面板 -->
     <Modal
       :show="rewardShow"
-      :maxWidth="430"
+      :max-width="430"
       title="赞赏博主"
-      titleIcon="reward"
+      title-icon="reward"
       @mask-click="rewardShow = false"
       @modal-close="rewardShow = false"
     >
       <div class="reward-card">
         <span class="thank">🙏 感谢您赐予我前进的力量</span>
         <div class="qr">
-          <a v-if="rewardData?.wechat" :href="rewardData.wechat" class="qr-img" target="_blank">
-            <img v-if="rewardData?.wechat" :src="rewardData.wechat" alt="微信" />
+          <a
+            v-if="rewardData?.wechat"
+            :href="rewardData.wechat"
+            class="qr-img"
+            target="_blank"
+          >
+            <img
+              v-if="rewardData?.wechat"
+              :src="rewardData.wechat"
+              alt="微信"
+            >
             <span class="tip">
               <i class="iconfont icon-wechat-pay" />
               微信
             </span>
           </a>
-          <a v-if="rewardData?.alipay" :href="rewardData.alipay" class="qr-img" target="_blank">
-            <img v-if="rewardData?.alipay" :src="rewardData.alipay" alt="支付宝" />
+          <a
+            v-if="rewardData?.alipay"
+            :href="rewardData.alipay"
+            class="qr-img"
+            target="_blank"
+          >
+            <img
+              v-if="rewardData?.alipay"
+              :src="rewardData.alipay"
+              alt="支付宝"
+            >
             <span class="tip">
               <i class="iconfont icon-alipay" />
               支付宝
             </span>
           </a>
         </div>
-        <div v-if="showJump" class="all-list s-card hover" @click="toRewardList">
+        <div
+          v-if="showJump"
+          class="all-list s-card hover"
+          @click="toRewardList"
+        >
           <span class="title">全部赞赏者名单</span>
           <span class="tip">
             赞赏金额将全部用于开源项目维护，以及服务器、域名及各类云服务的开销

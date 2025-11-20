@@ -1,6 +1,9 @@
 <!-- 分页 -->
 <template>
-  <div v-if="total > 0" class="pagination">
+  <div
+    v-if="total > 0"
+    class="pagination"
+  >
     <div
       v-if="currentPage > 1"
       class="page-item prev"
@@ -24,7 +27,10 @@
         <span class="page-num">{{ item }}</span>
       </div>
       <!-- 快速跳转 -->
-      <div :class="['fast-jump', { focus: inputFocus }]" title="快速跳转">
+      <div
+        :class="['fast-jump', { focus: inputFocus }]"
+        title="快速跳转"
+      >
         <input
           v-model.number="jumpInput"
           :min="1"
@@ -33,8 +39,11 @@
           @blur="fastJump"
           @input="validateInput"
           @keydown.enter="fastJump"
+        >
+        <i
+          :class="['iconfont icon-arrow-right', { click: jumpInput }]"
+          @click.stop="fastJump"
         />
-        <i :class="['iconfont icon-arrow-right', { click: jumpInput }]" @click.stop="fastJump" />
       </div>
     </div>
     <div

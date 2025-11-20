@@ -1,6 +1,9 @@
 <!-- 分类导航条 -->
 <template>
-  <div v-if="type === 'categories'" class="type-bar s-card hover">
+  <div
+    v-if="type === 'categories'"
+    class="type-bar s-card hover"
+  >
     <div class="all-type">
       <a
         v-if="currentTypeName"
@@ -9,7 +12,10 @@
       >
         {{ currentTypeName }}
       </a>
-      <a href="/" :class="['type-item', { choose: !currentTypeName }]">首页</a>
+      <a
+        href="/"
+        :class="['type-item', { choose: !currentTypeName }]"
+      >首页</a>
       <a
         v-for="(_, key, index) in theme.categoriesData"
         :key="index"
@@ -19,14 +25,24 @@
         {{ key }}
       </a>
     </div>
-    <a href="/pages/categories" class="more-type">
+    <a
+      href="/pages/categories"
+      class="more-type"
+    >
       <i class="iconfont icon-arrow-right" />
       更多
     </a>
   </div>
-  <div v-else-if="type === 'tags'" class="type-bar s-card hover">
+  <div
+    v-else-if="type === 'tags'"
+    class="type-bar s-card hover"
+  >
     <div class="all-type">
-      <a v-if="currentTypeName" :href="`/pages/tags/${currentTypeName}`" class="type-item choose">
+      <a
+        v-if="currentTypeName"
+        :href="`/pages/tags/${currentTypeName}`"
+        class="type-item choose"
+      >
         {{ currentTypeName }}
         <span class="num">{{ theme.tagsData?.[currentTypeName]?.count || 0 }}</span>
       </a>
@@ -40,7 +56,10 @@
         <span class="num">{{ item.count }}</span>
       </a>
     </div>
-    <a href="/pages/tags" class="more-type">
+    <a
+      href="/pages/tags"
+      class="more-type"
+    >
       <i class="iconfont icon-arrow-right" />
       更多
     </a>

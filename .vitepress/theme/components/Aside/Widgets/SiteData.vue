@@ -2,37 +2,43 @@
 <template>
   <div class="site-data s-card">
     <div class="title">
-      <i class="iconfont icon-chart"></i>
+      <i class="iconfont icon-chart" />
       <span class="title-name">站点数据</span>
     </div>
     <div class="all-data">
       <div class="data-item">
         <span class="name">
-          <i class="iconfont icon-article"></i>
+          <i class="iconfont icon-article" />
           文章总数
         </span>
         <span class="num">{{ theme.postData?.length || 0 }} 篇</span>
       </div>
       <div class="data-item">
         <span class="name">
-          <i class="iconfont icon-date"></i>
+          <i class="iconfont icon-date" />
           建站天数
         </span>
         <span class="num">{{ daysFromNow(theme.since) }} 天</span>
       </div>
       <div class="data-item">
         <span class="name">
-          <i class="iconfont icon-visibility"></i>
+          <i class="iconfont icon-visibility" />
           总访问量
         </span>
-        <span class="num" id="busuanzi_value_site_pv">0</span>
+        <span
+          id="busuanzi_value_site_pv"
+          class="num"
+        >0</span>
       </div>
       <div class="data-item">
         <span class="name">
-          <i class="iconfont icon-account"></i>
+          <i class="iconfont icon-account" />
           总访客数
         </span>
-        <span class="num" id="busuanzi_value_site_uv">0</span>
+        <span
+          id="busuanzi_value_site_uv"
+          class="num"
+        >0</span>
       </div>
     </div>
   </div>

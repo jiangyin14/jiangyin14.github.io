@@ -2,15 +2,26 @@
 <template>
   <div class="cat-or-tag">
     <div class="title">
-      <h1 class="title-name">{{ type === "categories" ? "全部分类" : "全部标签" }}</h1>
-      <span v-if="type === 'categories'" class="title-num">
+      <h1 class="title-name">
+        {{ type === "categories" ? "全部分类" : "全部标签" }}
+      </h1>
+      <span
+        v-if="type === 'categories'"
+        class="title-num"
+      >
         共有 {{ Object.keys(theme.categoriesData)?.length || 0 }} 个分类
       </span>
-      <span v-else class="title-num">
+      <span
+        v-else
+        class="title-num"
+      >
         共有 {{ Object.keys(theme.tagsData)?.length || 0 }} 个标签
       </span>
     </div>
-    <div v-if="type === 'categories'" class="type-lists">
+    <div
+      v-if="type === 'categories'"
+      class="type-lists"
+    >
       <a
         v-for="(item, key, index) in theme.categoriesData"
         :key="index"
@@ -22,7 +33,10 @@
         <span class="num">{{ item.count }}</span>
       </a>
     </div>
-    <div v-else class="type-lists">
+    <div
+      v-else
+      class="type-lists"
+    >
       <a
         v-for="(item, key, index) in theme.tagsData"
         :key="index"
