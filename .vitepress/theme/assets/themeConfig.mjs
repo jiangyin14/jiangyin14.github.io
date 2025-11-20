@@ -3,7 +3,7 @@ export const themeConfig = {
   // 站点信息
   siteMeta: {
     // 站点标题
-    title: "小姜的博客",
+    title: "姜胤的 Blog",
     // 站点描述
     description: "jiangyin14 的博客",
     // 站点logo
@@ -14,16 +14,16 @@ export const themeConfig = {
     lang: "zh-CN",
     // 作者
     author: {
-      name: "姜胤（小姜）",
+      name: "jiangyin14 姜胤",
       cover: "/images/author.jpeg",
       email: "jiangyin14@smart-teach.cn",
       link: "https://github.com/jiangyin14",
     },
   },
   // 备案信息
-  icp: "萌ICP备114514号",
+  icp: "津ICP备2025035356号",
   // 建站日期
-  since: "2020-07-28",
+  since: "2025-11-20",
   // 每页文章数据
   postSize: 8,
   // inject
@@ -212,16 +212,16 @@ export const themeConfig = {
   },
   // 评论
   comment: {
-    enable: false,
+    enable: true,
     // 评论系统选择
     // artalk / twikoo
-    type: "artalk",
-    // artalk
-    // https://artalk.js.org/
-    artalk: {
-      site: "",
-      server: "",
-    },
+    // type: "artalk",
+    // // artalk
+    // // https://artalk.js.org/
+    // artalk: {
+    //   site: "",
+    //   server: "",
+    // },
     // twikoo
     // https://twikoo.js.org/
     twikoo: {
@@ -237,7 +237,7 @@ export const themeConfig = {
   aside: {
     // 站点简介
     hello: {
-      enable: true,
+      enable: false,
       text: "这里有关于<strong>开发</strong>相关的问题和看法，也会有一些<strong>奇技淫巧</strong>的分享，其中大部分内容会侧重于<strong>前端开发</strong>。希望你可以在这里找到对你有用的知识和教程。",
     },
     // 目录
@@ -253,8 +253,8 @@ export const themeConfig = {
       enable: true,
       // 倒计时日期
       data: {
-        name: "春节",
-        date: "2025-01-29",
+        name: "生日",
+        date: "2025-12-10",
       },
     },
     // 站点数据
@@ -276,15 +276,15 @@ export const themeConfig = {
   // 音乐播放器
   // https://github.com/imsyy/Meting-API
   music: {
-    enable: false,
+    enable: true,
     // url
-    url: "https://api-meting.example.com",
+    url: "https://meting-api-omega.vercel.app/test",
     // id
-    id: 9379831714,
+    id: 2726570135,
     // netease / tencent / kugou
     server: "netease",
     // playlist / album / song
-    type: "playlist",
+    type: "song",
   },
   // 搜索
   // https://www.algolia.com/
@@ -295,7 +295,7 @@ export const themeConfig = {
   },
   // 打赏
   rewardData: {
-    enable: true,
+    enable: false,
     // 微信二维码
     wechat: "https://pic.efefee.cn/uploads/2024/04/07/66121049d1e80.webp",
     // 支付宝二维码
