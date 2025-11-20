@@ -76,6 +76,20 @@ const linkData = [
       },
     ],
   },
+  // 朋友们
+  {
+    type: "friends",
+    typeName: "朋友们",
+    typeDesc: "我的朋友们，分享技术与科技生活。",
+    typeList: [
+      {
+        name: "SR思锐 开发者",
+        avatar: "https://avatars.githubusercontent.com/u/89620382?v=4",
+        desc: "“全栈软件开发者，SR思锐 团队 创始人”",
+        url: "https://srinternet.github.io/",
+      },
+    ],
+  },
 ];
 
 export default linkData;
