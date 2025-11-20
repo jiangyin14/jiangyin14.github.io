@@ -173,7 +173,7 @@ export const themeConfig = {
     social: [
       { icon: "github", link: "https://github.com/jiangyin14" },
       { icon: "email", link: "mailto:jiangyin14@smart-teach.cn" },
-      { icon: "qq", link: "http://wpa.qq.com/msgrd?v=3&uin=1219439938&site=qq&menu=yes" },
+      { icon: "qq", link: "https://qm.qq.com/q/RwhNhuyecO" },
     ],
     sitemap: [
       {
@@ -205,7 +205,7 @@ export const themeConfig = {
         items: [
           { text: "邮箱", link: "mailto:jiangyin14@smart-teach.cn" },
           { text: "电话", link: "tel:18518122696" },
-          { text: "QQ", link: "http://wpa.qq.com/msgrd?v=3&uin=1219439938&site=qq&menu=yes" },
+          { text: "QQ", link: "hhttps://qm.qq.com/q/RwhNhuyecO" },
         ],
       },
     ],
