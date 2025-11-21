@@ -68,6 +68,12 @@ const linkData = [
         desc: "研发部成员，在社区初期运营有较大贡献。",
         url: "https://github.com/unDefFtr",
       },
+            {
+        name: "apanzinc的个人主页",
+        avatar: "https://apanzinc.top/images/icon/512.png",
+        desc: "研发部成员，专注于前端开发。",
+        url: "https://apanzinc.top",
+      },
       {
         name: "下一个就可以是你！",
         avatar: "https://static.smart-teach.cn/logos/use.jpg",
@@ -89,16 +95,16 @@ const linkData = [
         url: "https://srinternet.github.io/",
       },
       {
-        name: "apanzinc的个人主页",
-        avatar: "https://apanzinc.top/images/icon/512.png",
-        desc: "我是apanzinc，一名中学生，专注于学习前端、后端与App开发，并屡获殊荣。",
-        url: "https://apanzinc.top",
-      },
-      {
         name: "零风PLFJY 的 Blog",
         avatar: "https://blog.plfjy.top/img/header.png",
         desc: "一个在代码中遨游的旅人。",
         url: "https://blog.plfjy.top/",
+      },
+      {
+        name: "Jursin",
+        avatar: "https://blog.jursin.top/avatar.png",
+        desc: "一名大学生",
+        url: "https://blog.jursin.top/",
       },
     ],
   },
