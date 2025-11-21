@@ -90,7 +90,7 @@ const linkData = [
       },
       {
         name: "apanzinc的个人主页",
-        avatar: "https://avatars.githubusercontent.com/u/132417996",
+        avatar: "https://apanzinc.top/images/icon/512.png",
         desc: "我是apanzinc，一名中学生，专注于学习前端、后端与App开发，并屡获殊荣。",
         url: "https://apanzinc.top",
       },
