@@ -84,9 +84,21 @@ const linkData = [
     typeList: [
       {
         name: "SR思锐 开发者",
-        avatar: "https://avatars.githubusercontent.com/u/89620382?v=4",
-        desc: "“全栈软件开发者，SR思锐 团队 创始人”",
+        avatar: "https://avatars.githubusercontent.com/u/89620382",
+        desc: "全栈软件开发者，SR思锐 团队 创始人",
         url: "https://srinternet.github.io/",
+      },
+      {
+        name: "apanzinc的个人主页",
+        avatar: "https://avatars.githubusercontent.com/u/132417996",
+        desc: "我是apanzinc，一名中学生，专注于学习前端、后端与App开发，并屡获殊荣。",
+        url: "https://apanzinc.top",
+      },
+      {
+        name: "零风PLFJY 的 Blog",
+        avatar: "https://blog.plfjy.top/img/header.png",
+        desc: "一个在代码中遨游的旅人。",
+        url: "https://blog.plfjy.top/",
       },
     ],
   },
