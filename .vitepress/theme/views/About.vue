@@ -10,15 +10,15 @@
       <!-- 介绍 -->
       <div class="about-item hello">
         <span class="text1">你好，很高兴认识你👋</span>
-        <span class="text2 title2">我是 無名</span>
-        <span class="text3">是一名 前端开发工程师、独立开发者、博主</span>
+        <span class="text2 title2">我是 jiangyin14</span>
+        <span class="text3">是一名 前端开发工程师、学生创业者、初创公司老板</span>
       </div>
       <!-- 追求 -->
       <div class="about-item pursuit">
         <span class="tip">追求</span>
         <span class="title2">源于</span>
-        <span class="title2">热爱而去开发</span>
-        <span class="title2">优秀的作品</span>
+        <span class="title2">热爱而去开发和运营</span>
+        <span class="title2">优秀的产品和项目</span>
       </div>
     </div>
     <div
@@ -29,6 +29,7 @@
       <div class="about-item skills">
         <span class="tip">技能</span>
         <span class="title2">开启创造力</span>
+        <span class="title2">快速开发</span>
         <div class="skills-list">
           <a
             v-for="(item, index) in skillsData"
@@ -55,11 +56,11 @@
           <span
             class="list-item"
             style="--color: #357ef5"
-          >ZZRVTC · 计算机应用技术</span>
+          >智教联盟 天津汇智卓创 · CEO 全栈研发 · 2025</span>
           <span
             class="list-item"
             style="--color: #eb372a"
-          >FE · 前端开发工程师</span>
+          >思锐工作室 · 前端开发工程师 首席技术官 · 2024</span>
         </div>
         <img
           class="career-img"
@@ -78,11 +79,11 @@
         style="--color: #4298b4"
       >
         <span class="tip">性格</span>
-        <span class="title2">物流师</span>
+        <span class="title2">活动家</span>
         <span
           class="title2"
           style="color: var(--color)"
-        >ISTJ-A / ISTJ-T</span>
+        >ENFP-A / ENFP-T</span>
         <span class="more">
           在
           <a
@@ -91,10 +92,10 @@
           >16personalities</a>
           了解更多关于
           <a
-            href="https://www.16personalities.com/ch/istj-%E4%BA%BA%E6%A0%BC"
+            href="https://www.16personalities.com/ch/enfp-%E4%BA%BA%E6%A0%BC"
             target="_blank"
           >
-            物流师
+            活动家
           </a>
         </span>
         <img
@@ -126,9 +127,11 @@
       >
         <div class="image-content">
           <span class="tip">关注偏好</span>
-          <span class="title2">数码科技</span>
+          <span class="title2">数码电子</span>
+          <span class="title2">全栈研发</span>
+          <span class="title2">科技创业</span>
           <div class="image-desc">
-            <span class="left">手机、电脑及软硬件</span>
+            <span class="left">能通电的小玩意，投融资和创业都是我的爱好</span>
           </div>
         </div>
       </div>
@@ -141,7 +144,7 @@
       >
         <div class="image-content">
           <span class="tip">音乐偏好</span>
-          <span class="title2">欧美、华语流行、纯音乐、ACG</span>
+          <span class="title2">欧美、中V、EDM、ACG</span>
           <div class="image-desc">
             <span class="left">一起欣赏更多音乐</span>
           </div>
@@ -189,7 +192,7 @@
           class="about-item map image"
           style="background-image: url(https://pic.efefee.cn/uploads/2024/04/15/661cbccc56af5.webp)"
         >
-          <span class="position">我现在住在 <strong>中国，河南省</strong></span>
+          <span class="position">我现在住在 <strong>中国，北京市</strong></span>
         </div>
         <div class="about-item info">
           <div class="info-item">
@@ -197,14 +200,14 @@
             <span
               class="info-num"
               style="--color: #43a6c6"
-            >2001</span>
+            >2008</span>
           </div>
           <div class="info-item">
             <span class="info-name">现在职业</span>
             <span
               class="info-num"
               style="--color: #dfac46"
-            >前端开发工程师</span>
+            >学生创业者</span>
           </div>
         </div>
       </div>
