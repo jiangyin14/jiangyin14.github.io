@@ -4,11 +4,19 @@
         <title>姜胤的 Blog</title>
         <link>https://blog.jiangyin14.top</link>
         <description>jiangyin14 的博客</description>
-        <lastBuildDate>Fri, 21 Nov 2025 16:12:20 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 19 Dec 2025 08:43:03 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>jiangyin14 姜胤</generator>
         <language>zh</language>
         <copyright>Copyright © 2020-present jiangyin14 姜胤</copyright>
+        <item>
+            <title><![CDATA[我的代码生锈了]]></title>
+            <link>https://blog.jiangyin14.top/posts/我的代码生锈了</link>
+            <guid>https://blog.jiangyin14.top/posts/我的代码生锈了</guid>
+            <pubDate>Fri, 19 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[在未来的新项目中尽量用 Rust，探索个人开发者替代 Python 的可行性与得失。]]></description>
+            <author>jiangyin14@smart-teach.cn (jiangyin14 姜胤)</author>
+        </item>
         <item>
             <title><![CDATA[第一篇博客：jiangyin14的自我介绍]]></title>
             <link>https://blog.jiangyin14.top/posts/first-blog</link>
