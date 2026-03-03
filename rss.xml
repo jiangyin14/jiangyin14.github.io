@@ -4,11 +4,35 @@
         <title>姜胤的 Blog</title>
         <link>https://blog.jiangyin14.top</link>
         <description>jiangyin14 的博客</description>
-        <lastBuildDate>Fri, 19 Dec 2025 08:43:03 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 03 Mar 2026 01:20:15 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>jiangyin14 姜胤</generator>
         <language>zh</language>
         <copyright>Copyright © 2020-present jiangyin14 姜胤</copyright>
+        <item>
+            <title><![CDATA[怎么让音频信息有用：流场噪声与神经网络]]></title>
+            <link>https://blog.jiangyin14.top/posts/aerosmart-audio-analysis</link>
+            <guid>https://blog.jiangyin14.top/posts/aerosmart-audio-analysis</guid>
+            <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[探索如何利用麦克风采集声音，并用神经网络对音频进行处理，从流场噪声中提取有价值的空气动力学信息。]]></description>
+            <author>jiangyin14@smart-teach.cn (jiangyin14 姜胤)</author>
+        </item>
+        <item>
+            <title><![CDATA[写在前面：AeroSmart 项目介绍]]></title>
+            <link>https://blog.jiangyin14.top/posts/aerosmart-intro</link>
+            <guid>https://blog.jiangyin14.top/posts/aerosmart-intro</guid>
+            <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[AeroSmart 是一款面向航模爱好者与早期原型开发团队的桌面级智能涵道风洞系统。]]></description>
+            <author>jiangyin14@smart-teach.cn (jiangyin14 姜胤)</author>
+        </item>
+        <item>
+            <title><![CDATA[AeroSmart 技术设定：传感器、材料与软件架构]]></title>
+            <link>https://blog.jiangyin14.top/posts/aerosmart-tech-specs</link>
+            <guid>https://blog.jiangyin14.top/posts/aerosmart-tech-specs</guid>
+            <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[详细介绍 AeroSmart 系统的传感器选型、材料选择以及软硬件架构设计。]]></description>
+            <author>jiangyin14@smart-teach.cn (jiangyin14 姜胤)</author>
+        </item>
         <item>
             <title><![CDATA[我的代码生锈了]]></title>
             <link>https://blog.jiangyin14.top/posts/我的代码生锈了</link>
