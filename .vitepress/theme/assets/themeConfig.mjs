@@ -254,7 +254,7 @@ export const themeConfig = {
       // 倒计时日期
       data: {
         name: "生日",
-        date: "2025-12-10",
+        date: "2026-12-10",
       },
     },
     // 站点数据
